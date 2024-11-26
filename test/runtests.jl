@@ -1,5 +1,4 @@
 @eval module $(gensym())
-using UnspecifiedTypes: UnspecifiedTypes
 using Test: @testset
 
 @testset "UnspecifiedTypes.jl" begin
