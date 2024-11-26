@@ -32,8 +32,6 @@ Base.:/(::Number, ::UnspecifiedZero) = throw(DivideError())
 Base.:/(::UnspecifiedZero, ::UnspecifiedZero) = throw(DivideError())
 Base.:-(::UnspecifiedZero) = UnspecifiedZero()
 
-Base.promote_type(z::Type{<:UnspecifiedZero}, ElT::Type) = Base.promote_type(ElT, z)
-
-Base.promote_type(ElT::Type, ::Type{<:UnspecifiedZero}) = ElT
-Base.promote_type(::Type{<:UnspecifiedZero}, ::Type{<:UnspecifiedZero}) = UnspecifiedZero
-Base.promote_type(ElT::Type, ::Type{<:Complex{<:UnspecifiedZero}}) = Complex{real(ElT)}
+Base.promote_rule(::Type{<:UnspecifiedZero}, t::Type) = t2
+Base.promote_rule(::Type{<:UnspecifiedZero}, ::Type{<:UnspecifiedZero}) = UnspecifiedZero
+Base.promote_type(::Type{<:Complex{<:UnspecifiedZero}}, t::Type) = complex(t)
