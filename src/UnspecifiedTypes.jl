@@ -1,11 +1,9 @@
 module UnspecifiedTypes
 
-using LinearAlgebra
+export UnspecifiedArray, UnspecifiedNumber, UnspecifiedZero
 
 include("unspecifiednumber.jl")
 include("unspecifiedzero.jl")
-
 include("unspecifiedarray.jl")
 
-export UnspecifiedArray, UnspecifiedNumber, UnspecifiedZero
 end
