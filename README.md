@@ -14,7 +14,7 @@ A module defining a set of basic types which are place holders for allocated bit
 ```julia
 julia> using Pkg: Pkg
 
-julia> Pkg.add("https://github.com/ITensor/UnspecifiedTypes.jl")
+julia> Pkg.add(url="https://github.com/ITensor/UnspecifiedTypes.jl")
 ```
 
 ## Examples
