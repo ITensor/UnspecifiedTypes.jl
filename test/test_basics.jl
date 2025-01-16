@@ -13,4 +13,9 @@ using Test: @testset, @test
     @test x isa UnspecifiedZero
     @test x === UnspecifiedZero()
   end
+
+  # Normally, any number type takes precedence over
+  # `Bool`, check this isn't the case with `UnspecifiedZero`.
+  @test promote_type(UnspecifiedZero, Bool) === Bool
+  @test promote_type(Bool, UnspecifiedZero) === Bool
 end

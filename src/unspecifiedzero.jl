@@ -35,3 +35,9 @@ Base.:-(::UnspecifiedZero) = UnspecifiedZero()
 Base.promote_rule(::Type{<:UnspecifiedZero}, t::Type) = t
 Base.promote_rule(::Type{<:UnspecifiedZero}, ::Type{<:UnspecifiedZero}) = UnspecifiedZero
 Base.promote_type(::Type{<:Complex{<:UnspecifiedZero}}, t::Type) = complex(t)
+
+# Avoid circular definition in `Base.promote_type`, since
+# Base defines `promote_rule(::Type{Bool}, ::Type{T}) where {T<:Number} = T`.
+# I.e. normally numbers take precedence over `Bool`, but that
+# isn't the case for `UnspecifiedZero`.
+Base.promote_rule(::Type{Bool}, ::Type{<:UnspecifiedZero}) = Union{}
