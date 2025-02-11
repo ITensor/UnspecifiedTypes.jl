@@ -17,8 +17,8 @@ jobs:
     strategy:
        matrix:
          repo:
-           - 'ITensor/UnallocatedArrays.jl'
            - 'ITensor/ITensorBase.jl'
+           - 'ITensor/UnallocatedArrays.jl'
     uses: "ITensor/ITensorActions/.github/workflows/IntegrationTest.yml@main"
     with:
       localregistry: "https://github.com/ITensor/ITensorRegistry.git"
