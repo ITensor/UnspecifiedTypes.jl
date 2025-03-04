@@ -1,4 +1,9 @@
 [deps]
-UnspecifiedTypes = "42b3faec-625b-4613-8ddc-352bf9672b8d"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+UnspecifiedTypes = "42b3faec-625b-4613-8ddc-352bf9672b8d"
+
+[compat]
+Documenter = "1.8.1"
+Literate = "2.20.1"
+UnspecifiedTypes = "0.1.3"
