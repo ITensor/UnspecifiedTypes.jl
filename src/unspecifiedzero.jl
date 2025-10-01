@@ -10,7 +10,7 @@ Base.zero(n::UnspecifiedZero) = zero(typeof(n))
 
 # This helps handle a lot of basic algebra, like:
 # UnspecifiedZero() + 2.3 == 2.3
-Base.convert(::Type{T}, x::UnspecifiedZero) where {T<:Number} = T(zero(T))
+Base.convert(::Type{T}, x::UnspecifiedZero) where {T <: Number} = T(zero(T))
 
 #Base.convert(::Type{Complex{UnspecifiedZero}}, x::UnspecifiedZero) = complex(x)
 
