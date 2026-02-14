@@ -1,5 +1,5 @@
-using UnspecifiedTypes
 using BenchmarkTools
+using UnspecifiedTypes
 
 SUITE = BenchmarkGroup()
 SUITE["rand"] = @benchmarkable rand(10)

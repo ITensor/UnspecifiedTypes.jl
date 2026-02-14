@@ -1,5 +1,5 @@
+using Test: @test, @testset
 using UnspecifiedTypes: UnspecifiedZero
-using Test: @testset, @test
 
 @testset "UnspecifiedTypes (eltype=$elt)" for elt in (
         Float32, Float64, Complex{Float32}, Complex{Float64},
