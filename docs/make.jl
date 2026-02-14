@@ -1,5 +1,5 @@
-using UnspecifiedTypes: UnspecifiedTypes
 using Documenter: Documenter, DocMeta, deploydocs, makedocs
+using UnspecifiedTypes: UnspecifiedTypes
 
 DocMeta.setdocmeta!(
     UnspecifiedTypes, :DocTestSetup, :(using UnspecifiedTypes); recursive = true
@@ -14,9 +14,9 @@ makedocs(;
     format = Documenter.HTML(;
         canonical = "https://itensor.github.io/UnspecifiedTypes.jl",
         edit_link = "main",
-        assets = ["assets/favicon.ico", "assets/extras.css"],
+        assets = ["assets/favicon.ico", "assets/extras.css"]
     ),
-    pages = ["Home" => "index.md", "Reference" => "reference.md"],
+    pages = ["Home" => "index.md", "Reference" => "reference.md"]
 )
 
 deploydocs(;
