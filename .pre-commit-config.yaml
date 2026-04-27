@@ -12,6 +12,6 @@ repos:
     exclude_types: [markdown]  # incompatible with Literate.jl
 
 - repo: https://github.com/fredrikekre/runic-pre-commit
-  rev: v2.1.0
+  rev: v2.2.0
   hooks:
     - id: runic
