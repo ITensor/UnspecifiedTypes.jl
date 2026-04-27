@@ -1,11 +1,12 @@
 using Documenter: Documenter, DocMeta, deploydocs, makedocs
+using ITensorFormatter: ITensorFormatter
 using UnspecifiedTypes: UnspecifiedTypes
 
 DocMeta.setdocmeta!(
     UnspecifiedTypes, :DocTestSetup, :(using UnspecifiedTypes); recursive = true
 )
 
-include("make_index.jl")
+ITensorFormatter.make_index!(pkgdir(UnspecifiedTypes))
 
 makedocs(;
     modules = [UnspecifiedTypes],
